@@ -23,8 +23,10 @@ foreach($pages->get($wire->config->adminRootPageID)->children("check_access=0") 
 		if(count($p->children()) > 0 && $p->id != 3){
 			echo '<ul>';
 			foreach($p->children as $child){
-				$class = strpos($page->path, $child->path) === 0 ? " class='on'" : '';
-				echo "\n\t\t\t<li><a href='{$child->url}'$class>" . strip_tags($child->get('title|name')) . "</a>";
+				if($child->viewable()) {
+					$class = strpos($page->path, $child->path) === 0 ? " class='on'" : '';
+					echo "\n\t\t\t<li><a href='{$child->url}'$class>" . strip_tags($child->get('title|name')) . "</a>";
+				}
 				
 			}
 			echo '</ul>';
