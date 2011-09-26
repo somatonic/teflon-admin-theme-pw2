@@ -76,7 +76,7 @@ $config->scripts->append($config->urls->adminTemplates . "scripts/jquery.hoverin
 				<?php
 				foreach($this->fuel('breadcrumbs') as $breadcrumb) {
 					$title = htmlspecialchars(strip_tags($breadcrumb->title)); 
-					echo "\n\t\t\t<li><a href='{$breadcrumb->url}'>{$title}</a><span style='float:left;padding:0 7px'>&gt;</span></li>";
+					echo "\n\t\t\t<li><a href='{$breadcrumb->url}'>{$title}</a><span>&nbsp;</span></li>";
 				}
 			//	echo "\n\t\t\t<li>{$page->get('title|name')}</li>"; 
 				?>

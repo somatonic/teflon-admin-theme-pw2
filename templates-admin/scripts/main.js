@@ -46,6 +46,23 @@ $(document).ready(function() {
 		if(!$t.val() && !$t.is(".no_focus")) $t.focus();	
 	});
 
+
+/*
+	$('#ProcessPageSearchQuery').focus( function(){
+		$(this).stop().animate({
+			width: '145px',
+			opacity: 1
+		},500);
+	});
+
+	$('#ProcessPageSearchQuery').blur( function(){
+		$(this).stop().animate({
+			width: '80px'	,
+			opacity: .5
+		},500);
+	});
+*/
+
 	$('#content form').has(".WireTabs").css({'margin-top':'60px'});
 	$('#content form').addClass('clearfix');
 	
