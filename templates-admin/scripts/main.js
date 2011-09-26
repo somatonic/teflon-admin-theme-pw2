@@ -4,7 +4,7 @@ $(document).ready(function() {
 		hoverIntent:{ 
 			sensitivity:3,
 			timeout:300,
-			interval:100
+			interval:50
 			}
 		,showFX: 'fadeIn'
 		,hideFX: 'slideUp'

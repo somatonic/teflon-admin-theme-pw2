@@ -77,12 +77,12 @@ a {
 		
 }
 	a:hover {
-		color: #356f9e; 
+		color: #4287c0; 
 		/*background: #f10055;*/
 	}
 
 	a.on {
-		color: #356f9e;
+		color: #4287c0;
 	}
 
 .WireFatalError {
@@ -170,7 +170,8 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 				text-transform:uppercase;
 			}
 
-			#topnav a:hover{
+			#topnav a:hover,
+			#topnav a.hover{
 				color: #fff; 
 				/*background: #0f1920; url(images/topnav_a_bg.gif) top left repeat-x; */
 				box-shadow: inset 0px 0px 9px 2px rgba(0,10,20,0.4);
@@ -193,11 +194,12 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 				font-size:12px;
 				font-weight:normal;
 				text-shadow: none;
-				color:#7596af!important;
+				color:#416784!important;
 				text-transform:none;
 			}
 			
-			#topnav ul li a:hover{
+			#topnav ul li a:hover,
+			#topnav ul li a.hover{
 				color:#356f9f!important;
 				box-shadow: none;
 				background-color: #fff;
@@ -213,6 +215,8 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 			 	border:none; 
 				background-color: #508dc0; /*url(images/topnav_a_bg.gif) top left repeat-x; */
 			}
+			
+			
 	#breadcrumb {
 		position: absolute; 
 		left: 15px; 
@@ -266,8 +270,16 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 	position:absolute;
 	top:48px;
 	right: 190px;
-	color:#eee;
+	color:#ddd;
+	letter-spacing:0.09em;
 }
+#userinfo_top a,#userinfo_top a:visited{
+	color:#5a90bc;
+}
+#userinfo_top a:hover {
+	color: #eee;
+}
+
 #notices {
 	font-size: 1.3em; 
 }
