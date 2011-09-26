@@ -68,7 +68,7 @@ $config->scripts->append($config->urls->adminTemplates . "scripts/jquery.hoverin
 			<p id="logo">ProcessWire</p>
 
 			<ul id='topnav' class='nav droppy'>
-				<?php include($config->url->templatesAdmin . "topnav.inc"); ?>
+				<?php include($config->paths->templatesAdmin . "topnav.inc"); ?>
 			</ul>
 
 			<?php if(!$user->isGuest()): ?>

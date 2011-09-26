@@ -20,18 +20,16 @@ foreach($pages->get($wire->config->adminRootPageID)->children("check_access=0") 
 	if($showItem) { 
 		$class = strpos($page->path, $p->path) === 0 ? " class='on'" : '';
 		echo "\n\t\t\t<li><a href='{$p->url}'$class>" . strip_tags($p->get('title|name')) . "</a>";
-		if(count($p->children()) > 0 && $p->id != 3){
+		if($p->numChildren > 0 && $p->id != 3){
 			echo '<ul>';
-			foreach($p->children as $child){
-				if($child->viewable()) {
-					$class = strpos($page->path, $child->path) === 0 ? " class='on'" : '';
-					echo "\n\t\t\t<li><a href='{$child->url}'$class>" . strip_tags($child->get('title|name')) . "</a>";
+			foreach($p->children("check_access=0") as $subchild){
+				if($subchild->viewable()) {
+					$class = strpos($page->path, $subchild->path) === 0 ? " class='on'" : '';
+					echo "\n\t\t\t<li><a href='{$subchild->url}'$class>" . strip_tags($subchild->get('title|name')) . "</a>";
 				}
-				
 			}
 			echo '</ul>';
-			
 		}
-		"</li>"; 
+		echo "</li>"; 
 	}
 }
