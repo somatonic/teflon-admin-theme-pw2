@@ -272,26 +272,32 @@
 		color: #95afc4; 
 	}
 	
+	
+	
+	
+	
+	
 
-/* ------- added by night admin theme -------- */	
+/* ------- added by teflon admin theme -------- */	
 
 
-.PageList .detail{color:#999; margin: 0 1em 0 0 ;}
+.PageList .detail{ color: #999; margin: 0 1em 0 0 ; }
 
 .PageListLoading {
-	background:transparent url(images/loading.gif) top left no-repeat;
+	background: transparent url(images/loading.gif) top left no-repeat;
 }
 
-.asmListItem{width:99%;}
+.asmListItem{ width: 99%; }
 .asmListItem,.asmListItemLabel{
-	padding:3px;
+	padding: 3px;
 
 }
 .asmListItemRemove{
-	padding:3px;
+	padding: 3px;
 }
 
-
+.InputfieldPageListSelectMultiple ol li{ padding: 3px; }
+.InputfieldPageListSelectMultiple ol li .ui-icon-trash{ margin: 3px 3px; }
 
 /********************************************************************************************************
  * OVERWRITES PageListSort from ProgressPageList.css
@@ -379,5 +385,4 @@
 	color:#fff;
 
 }
-
 
