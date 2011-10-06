@@ -108,9 +108,12 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 	position:fixed;
 	top:0;
 	width:100%;
-	z-index:99;
+	z-index:90;
 	border-bottom:2px solid #000;
 	box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+	-moz-box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+	-webkit-box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+	-o-box-shadow: 0 4px 6px rgba(0,0,0,0.4);
 }
 
 	body.modal #masthead {
@@ -267,21 +270,46 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 		color:#333;
 	}
 	
+	
+	#userinfo_top{
+		position:absolute;
+		top:50px;
+		right: 145px;
+		color:#ddd;
+		letter-spacing:0.09em;
+	
+	}
+	#userinfo_top a,#userinfo_top a:visited{
+		color:#5a90bc;
+	}
+	#userinfo_top a:hover {
+		color: #eee;
+	}
+	
 
-#userinfo_top{
-	position:absolute;
-	top:50px;
-	right: 145px;
-	color:#ddd;
-	letter-spacing:0.09em;
 
-}
-#userinfo_top a,#userinfo_top a:visited{
-	color:#5a90bc;
-}
-#userinfo_top a:hover {
-	color: #eee;
-}
+	/**
+		 * The main/primary button for a listing screen, appears in the masthead
+		 *
+		 */
+	#head_button {
+		position: absolute; 
+		top: 163px;
+		right: 0; 
+		display: none; 
+	}
+		#head_button button {
+			margin-right: 0; 
+			margin-left: 10px; 
+			font-size: 1.1em; 
+		}
+
+
+	#head_button{ position:fixed; top:110px; right:3%;}
+	
+	/* for backward compatibility */
+	button#submit_save_top{ position:fixed; top:200px; right:3%;}
+
 
 #notices {
 	font-size: 1.3em; 
@@ -575,6 +603,7 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 		border:1px solid #ccd3d9;
 		padding:10px 15px 20px 15px!important;
 		margin-bottom: 20px!important;
+		background-color:#fff;
 		border-radius:5px;
 		}
 		
@@ -625,6 +654,3 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 			padding:8px 15px 8px 15px;
 		
 		}
-		
-		
-		button#submit_save_top{ position:fixed; top:100px; right:3%;}
