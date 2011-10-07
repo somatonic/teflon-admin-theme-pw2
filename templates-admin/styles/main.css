@@ -624,13 +624,11 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 	.WireTabs li{
 		padding:0 2px 0 0!important;
 		background:none!important;
-
 		height:24px;
 		}
 
 	.WireTabs li a{
 		border:1px solid #ccd3d9!important;
-		border-bottom:none;
 		padding:6px 15px 5px 15px;
 		background:#ddd url(images/tabs.gif) 0 0 repeat-x;
 		color:#747b7f;
@@ -654,3 +652,9 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 			padding:8px 15px 8px 15px;
 		
 		}
+		
+	.WireTabs li a#_ProcessPageEditView{
+		padding:4px 12px;
+		border-radius:5px;
+		margin:0 0 0 1em;
+	}
