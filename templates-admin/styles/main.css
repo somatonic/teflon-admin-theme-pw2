@@ -102,20 +102,18 @@ a.PageListSelectActionToggle { color:#35709f!important; }
  */
 
 #masthead {
- 	background:#000 url(images/bg.jpg) top center repeat-x;
-	
+ 	background: #000 url(images/bg.jpg) top center repeat-x;
 	height: 80px; 
 	font-size: 1.1em;
 	position:fixed;
 	top:0;
 	width:100%;
 	z-index:90;
-	border-bottom:1px solid #555;
+	border-bottom:2px solid #000;
+	box-shadow: 0 4px 6px rgba(0,0,0,0.4);
 	-moz-box-shadow: 0 4px 6px rgba(0,0,0,0.4);
 	-webkit-box-shadow: 0 4px 6px rgba(0,0,0,0.4);
 	-o-box-shadow: 0 4px 6px rgba(0,0,0,0.4);
-	box-shadow: 0 4px 6px rgba(0,0,0,0.4) , inset 0 30px 32px -30px rgba(0,0,0,0.6);
-	
 }
 
 	body.modal #masthead {
@@ -463,14 +461,14 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 				padding: 2px 6px 2px 6px; 
 				background-color:#eee;
 				border-bottom: none; 
-				color:#5f7c9a;
+				color:#94a2b0;
 				border-radius:4px;
 			}
 			.content ul.actions li a:hover,
 			li.action a:hover {
-				color:#428ac4;
+				color:#444;
 				background-color:#fff;
-				box-shadow: 0 0 4px #555;
+				box-shadow: 0 0 5px #aaa;
 			}
 		
 			.PageListActionMore a{margin-top:15px!important;}

@@ -249,7 +249,7 @@
 	.PageListItem:hover{background-color:#eee;}
 	
 	.PageList a.PageListPage{
-		color: #34526b;
+		color: #356f9e;
 		padding:3px 3px;
 	}
 		/**
@@ -268,7 +268,7 @@
 	 *
 	 */
 	.PageList .PageListItemOpen > a.PageListPage  {
-		color: #34526b; 
+		color: #356f9e; 
 		background-color:#fff8dd;
 	
 	}
@@ -278,11 +278,9 @@
 	 *
 	 */
 	.PageList .PageListStatusHidden a.PageListPage {
-		color: #879eb1; 
+		color: #95afc4; 
 	}
-	.PageList .PageListStatusHidden a.PageListPage:hover {
-		color: #428ac4!important; 
-	}
+	
 	
 	
 	

@@ -1,8 +1,13 @@
 # ignore all .htaccess\
 .htaccess
+
+.gitignore
+
 test*.php
 test_*
 ___*.php
 .tmp*
 *.psd
 .DS_Store
+_notes/*
+_notes
