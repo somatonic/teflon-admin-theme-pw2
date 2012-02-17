@@ -4,7 +4,9 @@
  * ProcessWire 2.x Admin Markup Template
  *
  * Copyright 2010 by Ryan Cramer
+ * Teflon Theme 2011 by Soma Philipp Urlich
  *
+ * @lastmodified 2012-02-17
  *
  */
 
@@ -19,14 +21,28 @@ $config->scripts->append($config->urls->adminTemplates . "scripts/main.js");
 $config->scripts->append($config->urls->adminTemplates . "scripts/jquery.droppy.js"); 
 $config->scripts->append($config->urls->adminTemplates . "scripts/jquery.hoverintent.js"); 
 
+/*
+ * Dynamic phrases that we want to be automatically translated
+ *
+ * These are in a comment so that they register with the parser, in place of the dynamic __() function calls with page titles. 
+ * 
+ * __("Pages"); 
+ * __("Setup"); 
+ * __("Modules"); 
+ * __("Access"); 
+ * __("Admin"); 
+ * 
+ */
+
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?php echo __('en', __FILE__); // HTML tag lang attribute
+	/* this intentionally on a separate line */ ?>"> 
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta charset="utf-8" />
 	<meta name="robots" content="noindex, nofollow" />
 
-	<title><?php echo strip_tags($page->get("browser_title|headline|title|name")); ?> &bull; ProcessWire</title>
+	<title><?php echo __(strip_tags($page->get("title|name")), __FILE__); ?> &bull; ProcessWire</title>
 
 	<script type="text/javascript">
 		<?php
@@ -68,20 +84,23 @@ $config->scripts->append($config->urls->adminTemplates . "scripts/jquery.hoverin
 			<p id="logo">ProcessWire</p>
 
 			<ul id='topnav' class='nav droppy'>
+				<li><a id='sitelink' href='<?php echo $config->urls->root; ?>'><?php echo __('Site', __FILE__); ?></a></li>
 				<?php include($config->paths->templatesAdmin . "topnav.inc"); ?>
+
 			</ul>
 
 			<?php if(!$user->isGuest()): ?>
-			<ul id='breadcrumb' class='nav'>
-				<?php
+
+			<ul id='breadcrumb' class='nav'><?php
 				foreach($this->fuel('breadcrumbs') as $breadcrumb) {
-					$title = htmlspecialchars(strip_tags($breadcrumb->title)); 
-					echo "\n\t\t\t<li><a href='{$breadcrumb->url}'>{$title}</a><span>&nbsp;</span></li>";
+					$title = __($breadcrumb->title, __FILE__); 
+					echo "\n\t\t\t\t<li><a href='{$breadcrumb->url}'>{$title}</a><span>&nbsp;</span></li>";
 				}
-			//	echo "\n\t\t\t<li>{$page->get('title|name')}</li>"; 
 				?>
+
 			</ul>
-			<?php endif; ?>	
+
+			<?php endif; ?>
 
 			<?php if(!$user->isGuest()): ?>
 			<span id='userinfo_top'>
@@ -108,7 +127,7 @@ $config->scripts->append($config->urls->adminTemplates . "scripts/jquery.hoverin
 
 			<div class="container">
 			
-				<h1 id='title'><?php echo strip_tags($this->fuel->processHeadline ? $this->fuel->processHeadline : $page->get("title|name")); ?></h1>
+				<h1 id='title'><?php echo __(strip_tags($this->fuel->processHeadline ? $this->fuel->processHeadline : $page->get("title|name")), __FILE__); ?></h1>
 
 				<?php if(trim($page->summary)) echo "<h2>{$page->summary}</h2>"; ?>
 				<?php if($page->body) echo $page->body; ?>
@@ -125,17 +144,6 @@ $config->scripts->append($config->urls->adminTemplates . "scripts/jquery.hoverin
 		<div class="container">
 			<p>
 
-			<?php if(!$user->isGuest()): ?>
-			<!--span id='userinfo'>
-				<?php echo $user->name?>  
-
-				<?php if($user->hasPermission('profile-edit')): ?> / 
-				<a class='action' href='<?php echo $config->urls->admin; ?>profile/'>profile</a> /
-				<?php endif; ?>
-
-				<a class='action' href='<?php echo $config->urls->admin; ?>login/logout/'>logout</a>
-			</span-->
-			<?php endif; ?>
 
 			ProcessWire <?php echo $config->version; ?> &copy; <?php echo date("Y"); ?> by Ryan Cramer 
 			</p>
@@ -143,6 +151,8 @@ $config->scripts->append($config->urls->adminTemplates . "scripts/jquery.hoverin
 			<?php if($config->debug && $this->user->isSuperuser()) include($config->paths->adminTemplates . "debug.inc"); ?>
 		</div>
 	</div>
+
+	<a id='sitelink' href='<?php echo $config->urls->root; ?>'><?php echo __('Site', __FILE__); ?></a>
 
 </body>
 </html>

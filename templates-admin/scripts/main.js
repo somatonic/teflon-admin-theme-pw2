@@ -18,26 +18,28 @@ $(document).ready(function() {
 
 	// if there are buttons in the format "a button" without ID attributes, copy them into the masthead
 	// or buttons in the format button.head_button_clone with an ID attribute.
-	var $buttons = $("#content a[id=] button[id=], #content button.head_button_clone[id!=]"); 
-	if($buttons.size() > 0) {
-		var $head = $("<div id='head_button'></div>").appendTo("#masthead .container").show();
-		$buttons.each(function() {
-			var $t = $(this);
-			var $a = $t.parent('a'); 
-			if($a.size()) { 
-				$button = $t.parent('a').clone();
-				$head.append($button);
-			} else if($t.is('.head_button_clone')) {
-				$button = $t.clone();
-				$button.attr('data-from_id', $t.attr('id')).attr('id', $t.attr('id') + '_copy');
-				$a = $("<a></a>").attr('href', '#');
-				$button.click(function() {
-					$("#" + $(this).attr('data-from_id')).click().parents('form').submit();
-					return false;
-				});
-				$head.append($a.append($button));	
-			}
-		}); 
+	if(!$.browser.msie){
+		var $buttons = $("#content a[id=] button[id=], #content button.head_button_clone[id!=]"); 
+		if($buttons.size() > 0) {
+			var $head = $("<div id='head_button'></div>").appendTo("#masthead .container").show();
+			$buttons.each(function() {
+				var $t = $(this);
+				var $a = $t.parent('a'); 
+				if($a.size()) { 
+					$button = $t.parent('a').clone();
+					$head.append($button);
+				} else if($t.is('.head_button_clone')) {
+					$button = $t.clone();
+					$button.attr('data-from_id', $t.attr('id')).attr('id', $t.attr('id') + '_copy');
+					$a = $("<a></a>").attr('href', '#');
+					$button.click(function() {
+						$("#" + $(this).attr('data-from_id')).click().parents('form').submit();
+						return false;
+					});
+					$head.append($a.append($button));	
+				}
+			}); 
+		}
 	}
 
 	// jQuery UI button states
@@ -61,10 +63,11 @@ $(document).ready(function() {
 	}
 
 	// add focus to the first text input, where applicable
-	jQuery('#content input[type=text]:visible:enabled:first').each(function() {
+	/*jQuery('#content input[type=text]:visible:enabled:first').each(function() {
 		var $t = $(this); 
 		if(!$t.val() && !$t.is(".no_focus")) $t.focus();	
 	});
+	*/
 
 /*
 	$('#ProcessPageSearchQuery').focus( function(){
