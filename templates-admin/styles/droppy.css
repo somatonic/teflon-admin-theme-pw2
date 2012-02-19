@@ -18,15 +18,15 @@
     
 /* Essentials - configure this */
 
-.droppy ul { width: 240px; }
-.droppy ul ul { left: 240px; }
+.droppy ul { width: 220px; }
+.droppy ul ul { left: 220px; }
 
 /* Everything else is theming */
 
 .droppy *:hover { background-color: none; }
 
   .droppy ul { top: 31px; left:0px;}
-    .droppy ul li a { width:210px; display:block;  }
+    .droppy ul li a { width:190px; display:block;}
       .droppy ul a.has-subnav {  }
 	  .droppy ul a.hover {  }
    .droppy ul a {  }

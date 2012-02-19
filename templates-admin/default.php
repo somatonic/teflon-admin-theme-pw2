@@ -41,6 +41,7 @@ $config->scripts->append($config->urls->adminTemplates . "scripts/jquery.hoverin
 <head>
 	<meta charset="utf-8" />
 	<meta name="robots" content="noindex, nofollow" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 	<title><?php echo __(strip_tags($page->get("title|name")), __FILE__); ?> &bull; ProcessWire</title>
 
@@ -80,6 +81,7 @@ $config->scripts->append($config->urls->adminTemplates . "scripts/jquery.hoverin
 <body<?php if($bodyClass) echo " class='$bodyClass'"; ?>>
 
 	<div id="masthead" class="masthead">
+	
 		<div class="container">
 			<p id="logo">ProcessWire</p>
 
@@ -107,10 +109,10 @@ $config->scripts->append($config->urls->adminTemplates . "scripts/jquery.hoverin
 				<?php echo $user->name?>  
 
 				<?php if($user->hasPermission('profile-edit')): ?> : 
-				<a class='action' href='<?php echo $config->urls->admin; ?>profile/'>profile</a> :
+				<a class='action' href='<?php echo $config->urls->admin; ?>profile/'><?php echo __('profile', __FILE__); ?></a> :
 				<?php endif; ?>
 
-				<a class='action' href='<?php echo $config->urls->admin; ?>login/logout/'>logout</a>
+				<a class='action' href='<?php echo $config->urls->admin; ?>login/logout/'><?php echo __('logout', __FILE__); ?></a>
 			</span>
 			<?php endif; ?>
 			
@@ -151,8 +153,6 @@ $config->scripts->append($config->urls->adminTemplates . "scripts/jquery.hoverin
 			<?php if($config->debug && $this->user->isSuperuser()) include($config->paths->adminTemplates . "debug.inc"); ?>
 		</div>
 	</div>
-
-	<a id='sitelink' href='<?php echo $config->urls->root; ?>'><?php echo __('Site', __FILE__); ?></a>
 
 </body>
 </html>

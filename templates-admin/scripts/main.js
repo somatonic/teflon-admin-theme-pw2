@@ -92,12 +92,12 @@ $(document).ready(function() {
 		hoverIntent:{ 
 			sensitivity:3,
 			timeout:300,
-			interval:50
+			interval:30
 			}
 		,showFX: 'fadeIn'
 		,hideFX: 'slideUp'
 		,sticky: false
-		,speed : 200
+		,speed : 100
 		}
 		);
 
