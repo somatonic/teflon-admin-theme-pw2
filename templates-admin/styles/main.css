@@ -334,6 +334,7 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 	font-size: 1.3em; 
 	box-shadow: 0 4px 5px 0px #ddd;
 	border-bottom:1px solid #ddd;
+
 }
 	#content .container {
 		min-height: 50px; 
@@ -392,13 +393,16 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 		border:0;
 		padding: 5px 8px;
 		border-bottom:1px solid #d1d6da;
-
 		border-collapse:separate;
 	}
 
 	.content table.AdminDataList tr:hover td{ background-color:#eaeaea;}
 	
-	.content input,textarea { border-radius:5px; background: #fff; border:1px solid #aaa; padding:5px; font-size:13px!important;}
+	.content input,textarea { border-radius:5px; background: #fff; border:1px solid #aaa; padding:5px; font-size:13px!important;
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+	}
 	
 	.content h2 {
 		font-family: sans-serif; 
