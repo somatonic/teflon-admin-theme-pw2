@@ -156,8 +156,8 @@
 	}
 
 	.Inputfields textarea, 
-	.InputfieldMaxWidth, {
-		width: 99%; 
+	.InputfieldMaxWidth {
+		width: 98%; 
 	}
 
 	.Inputfields .InputfieldStateToggle {
