@@ -41,6 +41,8 @@
 	padding: 0; 
 }
 
+.ui-slider { height:0.9em!important; padding:0!important;}
+.ui-slider-range{ height:100%!important; padding:0!important;}
 
 /****************************************************************************************
  * Theme specific Inputfield module overrides
@@ -92,7 +94,16 @@
 		margin: 0.75em 0;
 		clear: both; 
 	}
-
+	.Inputfields > li.InputfieldColumnWidth {
+		float: left; 
+		clear: none; 
+		margin-top: 0; 
+		margin-left: 0.75em; 
+	}
+		.Inputfields li.InputfieldColumnWidthFirst {
+			clear: both; 
+			margin-left: 0; 
+		}
 	.Inputfields > li .notes {
 		margin-bottom: 0; 
 	}
