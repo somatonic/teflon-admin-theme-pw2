@@ -21,6 +21,9 @@ $config->scripts->append($config->urls->adminTemplates . "scripts/main.js");
 $config->scripts->append($config->urls->adminTemplates . "scripts/jquery.droppy.js"); 
 $config->scripts->append($config->urls->adminTemplates . "scripts/jquery.hoverintent.js"); 
 
+$browserTitle = wire('processBrowserTitle'); 
+if(!$browserTitle) $browserTitle = __(strip_tags($page->get('title|name')), __FILE__) . ' &bull; ProcessWire';
+
 /*
  * Dynamic phrases that we want to be automatically translated
  *
