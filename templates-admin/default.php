@@ -12,6 +12,9 @@
 
 $searchForm = $user->hasPermission('page-edit') ? $modules->get('ProcessPageSearch')->renderSearchForm() : '';
 $bodyClass = $input->get->modal ? 'modal' : '';
+
+$sitename = $config->siteName ? $config->siteName : $_SERVER['SERVER_NAME'];
+
 if(!isset($content)) $content = '';
 
 $config->styles->prepend($config->urls->adminTemplates . "styles/main.css"); 
@@ -46,7 +49,7 @@ if(!$browserTitle) $browserTitle = __(strip_tags($page->get('title|name')), __FI
 	<meta name="robots" content="noindex, nofollow" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-	<title><?php echo __(strip_tags($page->get("title|name")), __FILE__); ?> &bull; ProcessWire</title>
+	<title><?php echo __(strip_tags($page->get("title|name")), __FILE__); ?> &bull; <?php echo $sitename ?> &bull; ProcessWire</title>
 
 	<script type="text/javascript">
 		<?php
