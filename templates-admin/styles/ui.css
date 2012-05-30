@@ -61,11 +61,12 @@
 	}
 
 	.Inputfields .ui-widget-content {
-		padding: 1em; 
+		padding: 0.8em; 
+		background-color:#f2f2f3;
 	}
 
 	.Inputfields .ui-widget-header {
-			padding: 0.25em 0 0.25em 1em; 
+			padding: 0.25em 0 0.25em 0.8em; 
 			-webkit-user-select: none;
 			-khtml-user-select: none;
 			-moz-user-select: none;
@@ -82,7 +83,7 @@
 		margin-top: 0; 
 	}
 	.Inputfields > li > .ui-widget-content > .Inputfields > li {
-		margin-top: 0.5em; 
+		margin-top: 0em; 
 	}
 
 	.Inputfields li > .ui-widget-content .Inputfields > li:last-child {
@@ -96,9 +97,9 @@
 	}
 	.Inputfields > li.InputfieldColumnWidth {
 		float: left; 
-		clear: none; 
+		clear:none;
 		margin-top: 0; 
-		margin-left: 0.75em; 
+		margin-left: 1%; 
 	}
 		.Inputfields li.InputfieldColumnWidthFirst {
 			clear: both; 
@@ -250,18 +251,50 @@
  *
  */
 
+	/**
+	 * Give the page a lighter/alte rnate color when it has a hidden status
+	 *
+	 */
+	.PageList .PageListStatusHidden {
+	 	background:transparent url(images/icon-doc-hidden.png) 3px 4px no-repeat;
+	 }
+	.PageList .PageListStatusHidden a.PageListPage {
+		color: #a2b4c3; 
+
+	}
+	.PageList .PageListStatusHidden a.PageListPage:hover {
+		color: #428ac4; 
+	}
+	
+	.PageListID7{
+		background:transparent url(images/icon-trash.png) 3px 4px no-repeat!important;
+	}
+	.PageListID2{
+		background:transparent url(images/icon-admin.png) 2px 4px no-repeat!important;
+	}
+	.PageListID1{
+		background:transparent url(images/icon-home.png) 0px 4px no-repeat!important;
+	}
+
+	.PageListStatusUnpublished {
+		background:transparent url(images/icon-unpublished.png) 0px 4px no-repeat!important;
+	}
+	
+	
+	
+
 .PageList {
 }
 	/**
 	 * Default color for page list items
 	 *
 	 */
-	.PageListItem {padding:6px 6px 6px 18px;border-bottom:1px solid #ddd; background:transparent url(images/icon-doc.gif) 3px 4px no-repeat;}
+	.PageListItem {padding:6px 6px 6px 20px;border-bottom:1px solid #ddd; background:transparent url(images/icon-doc2.png) 3px 4px no-repeat;}
 	.PageListItem:hover{background-color:#eee;}
 	
 	.PageList a.PageListPage{
 		color: #34526b;
-		padding:3px 3px;
+		padding:3px 6px;
 	}
 		/**
 	 	 * Color when hovered
@@ -270,7 +303,7 @@
 		.PageList a.PageListPage:hover {
 			background: none; 
 			color: #428ac4;
-		
+			padding:3px 6px!important;
 		}
 		
 
@@ -279,26 +312,22 @@
 	 *
 	 */
 	.PageList .PageListItemOpen > a.PageListPage  {
-		color: #34526b; 
-		background-color:#fff8dd;
-	
+		color: #fff!important;
+		background-color:#4f87b6!important;
+		border-radius:4px;
+		padding-right:6px;
+		padding-left:6px;
 	}
+	
 
-	/**
-	 * Give the page a lighter/alternate color when it has a hidden status
-	 *
-	 */
-	.PageList .PageListStatusHidden a.PageListPage {
-		color: #879eb1; 
+	.PageList .PageListAccessOff a.PageListPage,
+	.PageList .PageListAccessOff a.PageListPage:hover {
+		padding-right:15px!important;
 	}
-	.PageList .PageListStatusHidden a.PageListPage:hover {
-		color: #428ac4!important; 
+	.PageList .PageListAccessOn a.PageListPage,
+	.PageList .PageListAccessOn a.PageListPage:hover {
+		padding-right:18px!important;
 	}
-	
-	
-	
-	
-	
 
 /* ------- added by teflon admin theme -------- */	
 
@@ -408,3 +437,4 @@
 
 }
 
+.InputfieldPageListSelectMultiple ol li{ width:auto;}

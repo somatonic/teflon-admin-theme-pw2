@@ -101,8 +101,13 @@ $(document).ready(function() {
 		}
 		);
 
-	$('#content form').has(".WireTabs").css({'margin-top':'60px'});
+	$('#content form').has(".WireTabs").css({'margin-top':'44px'});
 	$('#content form').addClass('clearfix');
+	
 	
 }); 
 
+$(window).load(function(){
+
+	
+});

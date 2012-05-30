@@ -39,7 +39,7 @@ html[xmlns] .clearfix {
 }
 
 body {
-	background-color: #fff; 
+	background-color: #f4f4f5; 
 	font: 10px/20px "Helvetica Neue", Arial, sans-serif; 
 	color: #747b7f; 
 	
@@ -51,23 +51,21 @@ body {
 
 #content,
 #footer {
-	padding-right: 20px;
-	padding-left: 20px; 
+	padding:0 20px;
 }
 
 .container {
 	position: relative; 
-
-	min-width: 800px; 
-	max-width: 970px; 
+	min-width: 950px; 
+	max-width: 1140px; 
 	margin: 0 auto; 
 }
 
 
 	body.modal .container {
-		margin: 0; 
+		margin: 0 auto; 
 		width:96%;
-		min-width: 300px; 
+		min-width: 300px;
 	}
 
 
@@ -111,8 +109,9 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 	width:100%;
 	z-index:90;
 	border-bottom:1px solid #555;
-	-moz-box-shadow: 0 4px 6px rgba(0,0,0,0.4);
 	-webkit-box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+	-moz-box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+	-ms-box-shadow: 0 4px 6px rgba(0,0,0,0.4);
 	-o-box-shadow: 0 4px 6px rgba(0,0,0,0.4);
 	box-shadow: 0 4px 6px rgba(0,0,0,0.4) , inset 0 30px 32px -30px rgba(0,0,0,0.6);
 	
@@ -124,7 +123,7 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 
 	#logo {
 		position: absolute; 
-		right: -10px;
+		right: 5px;
 		top: 1px; 
 		width: 135px;
 		height:31px;
@@ -247,17 +246,18 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 			}
 
 	#title {
-		font-size: 26px; 	
+		font-size: 26px;
+		line-height: 1.3em;
 		font-family: sans-serif; 
 		color: #333; 
-		margin: 0 0 1em 0; 
-		white-space: nowrap; 
+		margin: 0 0 0.6em 0; 
+		/*white-space: nowrap; */
 	}
 
 	#ProcessPageSearchQuery {
 		position: absolute; 
 		top:49px;
-		right: 0; 
+		right: 15px; 
 		width: 112px; 
 		padding: 2px 7px;
 		height: 17px; 
@@ -277,7 +277,7 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 	#userinfo_top{
 		position:absolute;
 		top:50px;
-		right: 145px;
+		right: 155px;
 		color:#ddd;
 		letter-spacing:0.09em;
 	
@@ -308,10 +308,10 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 		}
 
 
-	#head_button{ position:fixed; top:110px; right:3%;}
+	#head_button{ position:fixed; top:120px; right:5%;}
 	
 	/* for backward compatibility */
-	button#submit_save_top{ position:fixed; top:200px; right:3%;}
+	button#submit_save_top{ position:fixed; top:120px; right:5%;}
 
 
 #notices {
@@ -327,8 +327,8 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 #wrapper-content{ margin:100px 0 0 0;}
 #content {
 	position: relative; 
-	background: #fff;
-	padding-top: 2em; 
+	background-color: #f4f4f5; 
+	padding-top: 1em; 
 	padding-bottom: 2em; 
 	font-family: sans-serif; 
 	font-size: 1.3em; 
@@ -343,7 +343,7 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 	}
 	.modal #wrapper-content{
 		margin-top:0;
-		background-color: #fff;
+		background-color: #f5f5f7; 
 	}
 
 		.content img {
@@ -398,10 +398,13 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 
 	.content table.AdminDataList tr:hover td{ background-color:#eaeaea;}
 	
-	.content input,textarea { border-radius:5px; background: #fff; border:1px solid #aaa; padding:5px; font-size:13px!important;
+	.content input, .content textarea { border-radius:5px; background-color: #fff!important; border:1px solid #aaa; padding:5px!important; font-size:13px!important;
 		box-sizing: border-box;
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
+	}
+	div.uploader span.action{
+		background-color:#f2f2f3;
 	}
 	
 	.content h2 {
@@ -614,39 +617,92 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 	margin-left: auto;
 	margin-right: auto; 
 }	
-	
-	#content form {
-		position:relative!important;
-		border:1px solid #ccd3d9;
-		padding:10px 15px 20px 15px!important;
-		margin-bottom: 20px!important;
-		background-color:#fff;
-		border-radius:5px;
-		}
-		
-	#content form#ProcessPageSearchOptionsForm
-	{
-		border:0;
-		padding:0!important;
+	.ProcessLoginForm #content .container,
+	#content .container {
+		/*border-top:1px solid #ccd3d9;*/
+		border-bottom:2px solid #ccd3d9;
+		padding:20px 20px 30px 20px;
+		margin-bottom: 20px;
+		background-color:#f8f8f9;
+		border-radius:15px;
+		-webkit-box-shadow: 0 0 20px #ccd3d9;
+		-moz-box-shadow: 0 0 20px #ccd3d9;
+		-ms-box-shadow: 0 0 20px #ccd3d9;
+		-o-box-shadow: 0 0 20px #ccd3d9;
+		box-shadow: 0 4px 20px #ccd3d9;
 	}
+	#content form{
+		position:relative!important;
+		border-top:1px solid #ccd3d9;
+	}
+
+	#content #ProcessLoginForm{
+		background-color:transparent;
+		border:0;
+		box-shadow:none;
+		padding:0;
+		margin:0 auto;
+	}
+	.ProcessLoginForm #logo {
+		position:relative;
+		margin:0 auto;
+		top:2px;
+	}
+	.ProcessLoginForm #topnav{ display:none; }
+	.ProcessLoginForm #content {
+		padding:20px 0 0 0;
+		box-shadow:none;
+	}
+	.ProcessLoginForm #content .container{
+		min-width:200px;
+		max-width:300px!important;
+		padding:20px 15px 20px 15px;
+	}
+
+
+	.ProcessLoginForm #content .InputfieldText{
+		width:100%;
+		float:none;
+	}
+	.ProcessLoginForm #content .InputfieldSubmit{
+		float:right;
+	}
+	.ProcessLoginForm #content .InputfieldText input{
+		width:100%;
+	}
+	.ProcessLoginForm .footer {text-align:center;}
+
+
+	#content #ProcessPageSearchOptionsForm
+	{
+		width:100%;
+		border:0;
+		padding:15px!important;
+	}
+	#content #ProcessPageSearchResults.show_options{
+		padding-left:300px;
+	}
+
+
+
+	#content #fieldgroupContext{ top:1em; right:8em;}
 		
 	.WireTabs{ 
 		padding: 5px 0;
-		margin: 0 0 0 15px!important;
+		margin: 0 0 0 2px!important;
 		border-bottom:1px solid #ccd3d9;
 		position:absolute!important;
 		top:-31px!important; left:0!important;
-
 	}
 	.WireTabs li{
-		padding:0 2px 0 0!important;
+		padding:0 1px 0 0!important;
 		background:none!important;
 		height:24px;
 		}
 
 	.WireTabs li a{
 		border:1px solid #ccd3d9!important;
-		padding:6px 15px 5px 15px;
+		padding:6px 15px 8px 15px;
 		background:#ddd url(images/tabs.gif) 0 0 repeat-x;
 		color:#747b7f;
 		border-radius:5px 5px 0 0 ;
@@ -656,18 +712,18 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 			border-bottom:1px solid #fff;
 			color:#333;
 			padding:8px 15px 8px 15px;
-			background:#eee url(images/tabs.gif) 0 -50px repeat-x;
+			background:#eee url(images/tabs.gif) 0 -60px repeat-x;
 		}
 	.WireTabs li a.on{
 			color:#333;
 			background-image:none;
 			border:1px solid #ccd3d9;
-			border-bottom:1px solid #fff!important;
+			border-bottom:1px solid #f8f8f9!important;
 			position:relative;
-			z-index:10;
-			background-color:#fff;
+			z-index:1;
+			background-color:#f8f8f9;
 			padding:8px 15px 8px 15px;
-		
+			
 		}
 		
 	.WireTabs li a#_ProcessPageEditView{

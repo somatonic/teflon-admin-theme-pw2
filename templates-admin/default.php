@@ -12,7 +12,7 @@
 
 $searchForm = $user->hasPermission('page-edit') ? $modules->get('ProcessPageSearch')->renderSearchForm() : '';
 $bodyClass = $input->get->modal ? 'modal' : '';
-
+$bodyClass .= $page->path == $config->urls->admin . "login/" ? ' ProcessLoginForm' : '';
 $sitename = $config->siteName ? $config->siteName : $_SERVER['SERVER_NAME'];
 
 if(!isset($content)) $content = '';
@@ -20,12 +20,11 @@ if(!isset($content)) $content = '';
 $config->styles->prepend($config->urls->adminTemplates . "styles/main.css"); 
 $config->styles->append($config->urls->adminTemplates . "styles/ui.css"); 
 $config->styles->append($config->urls->adminTemplates . "styles/droppy.css"); 
+$config->styles->append($config->urls->adminTemplates . "scripts/uniform/css/uniform.default.css"); 
 $config->scripts->append($config->urls->adminTemplates . "scripts/main.js"); 
 $config->scripts->append($config->urls->adminTemplates . "scripts/jquery.droppy.js"); 
 $config->scripts->append($config->urls->adminTemplates . "scripts/jquery.hoverintent.js"); 
-
-$browserTitle = wire('processBrowserTitle'); 
-if(!$browserTitle) $browserTitle = __(strip_tags($page->get('title|name')), __FILE__) . ' &bull; ProcessWire';
+$config->scripts->append($config->urls->adminTemplates . "scripts/uniform/jquery.uniform.min.js"); 
 
 /*
  * Dynamic phrases that we want to be automatically translated
@@ -134,7 +133,7 @@ if(!$browserTitle) $browserTitle = __(strip_tags($page->get('title|name')), __FI
 		<div id="content" class="content">
 
 			<div class="container">
-			
+				
 				<h1 id='title'><?php echo __(strip_tags($this->fuel->processHeadline ? $this->fuel->processHeadline : $page->get("title|name")), __FILE__); ?></h1>
 
 				<?php if(trim($page->summary)) echo "<h2>{$page->summary}</h2>"; ?>
