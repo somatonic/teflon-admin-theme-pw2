@@ -103,8 +103,9 @@
 	}
 		.Inputfields li.InputfieldColumnWidthFirst {
 			clear: both; 
-			margin-left: 0; 
+			margin-left: 0;
 		}
+	
 	.Inputfields > li .notes {
 		margin-bottom: 0; 
 	}
@@ -438,3 +439,5 @@
 }
 
 .InputfieldPageListSelectMultiple ol li{ width:auto;}
+
+

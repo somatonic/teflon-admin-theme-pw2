@@ -617,6 +617,9 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 	margin-left: auto;
 	margin-right: auto; 
 }	
+
+
+
 	.ProcessLoginForm #content .container,
 	#content .container {
 		/*border-top:1px solid #ccd3d9;*/
@@ -686,7 +689,8 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 
 
 	#content #fieldgroupContext{ top:1em; right:8em;}
-		
+		body.modal #content #fieldgroupContext{ position:absolute; top:-9999px!important; right: 0; }
+
 	.WireTabs{ 
 		padding: 5px 0;
 		margin: 0 0 0 2px!important;
