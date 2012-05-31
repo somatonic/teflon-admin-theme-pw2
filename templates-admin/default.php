@@ -20,11 +20,9 @@ if(!isset($content)) $content = '';
 $config->styles->prepend($config->urls->adminTemplates . "styles/main.css"); 
 $config->styles->append($config->urls->adminTemplates . "styles/ui.css"); 
 $config->styles->append($config->urls->adminTemplates . "styles/droppy.css"); 
-$config->styles->append($config->urls->adminTemplates . "scripts/uniform/css/uniform.default.css"); 
 $config->scripts->append($config->urls->adminTemplates . "scripts/main.js"); 
 $config->scripts->append($config->urls->adminTemplates . "scripts/jquery.droppy.js"); 
-$config->scripts->append($config->urls->adminTemplates . "scripts/jquery.hoverintent.js"); 
-$config->scripts->append($config->urls->adminTemplates . "scripts/uniform/jquery.uniform.min.js"); 
+$config->scripts->append($config->urls->adminTemplates . "scripts/jquery.hoverintent.js");  
 
 /*
  * Dynamic phrases that we want to be automatically translated
