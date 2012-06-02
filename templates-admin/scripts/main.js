@@ -104,10 +104,59 @@ $(document).ready(function() {
 	$('#content form').has(".WireTabs").css({'margin-top':'44px'});
 	$('#content form').addClass('clearfix');
 	
+
+	
+	
+	$('#content form li.InputfieldColumnWidthFirst').each(function(){
+		$(this).nextUntil('li:not("li.InputfieldColumnWidth")')
+			.each(function(i){
+				console.log("i:" + i);
+				if(i==0){
+					$field.add($(this).prev('li'),document);
+					$field.add($(this),document);
+				} else {
+					$field.add($(this),document);
+				}
+				$fields.add($field);
+				console.log("fieldssize:" + $field.size());
+			});
+	   
+		$fields.each(function(){
+			$(this).find('.ui-widget-content').css({'min-height': '200px'});
+		});
+		
+	});
+		
 	
 }); 
 
 $(window).load(function(){
+	var hash = window.location.hash;
+	if (hash){
+		var $target = $(hash);
+		$(window).scrollTo( $target , 600, {offset:{top:-100}});
+	}
 
-	
+	$('#topnav a.notinstalled').click(function(e){
+		
+		if(window.location.href.search('module') == -1){
+			// if not on module page alrady
+		} else {
+			e.preventDefault();
+			name = $(this).attr('rel');
+			var $target = $("span#"+name);
+			$(window).scrollTo( $target , 600, {offset:{top:-100}});
+		}
+		
+	});
 });
+
+function getParam(variable){
+	var query = window.location.search.substring(1);
+	var vars = query.split("&");
+	for (var i=0;i<vars.length;i++){
+		var pair = vars[i].split("=");
+		if(pair[0] == variable) return unescape(pair[1]);
+	}
+	return(false);
+}
