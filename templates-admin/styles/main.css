@@ -217,7 +217,7 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 				background-color: #508dc0; /*url(images/topnav_a_bg.gif) top left repeat-x; */
 			}
 			
-			#topnav a span.ui-icon { z-index:1; display:block; position:absolute; top:4px; right:50px;}
+			#topnav a span.ui-icon { z-index:1; display:block; position:absolute; top:4px; right:30px;}
 			#topnav a.notinstalled { color:#b4c3d7!important;}
 
 			
