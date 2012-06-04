@@ -107,25 +107,25 @@ $(document).ready(function() {
 
 	
 	
-	$('#content form li.InputfieldColumnWidthFirst').each(function(){
-		$(this).nextUntil('li:not("li.InputfieldColumnWidth")')
-			.each(function(i){
-				console.log("i:" + i);
-				if(i==0){
-					$field.add($(this).prev('li'),document);
-					$field.add($(this),document);
-				} else {
-					$field.add($(this),document);
-				}
-				$fields.add($field);
-				console.log("fieldssize:" + $field.size());
-			});
+	// $('#content form li.InputfieldColumnWidthFirst').each(function(){
+	// 	$(this).nextUntil('li:not("li.InputfieldColumnWidth")')
+	// 		.each(function(i){
+	// 			console.log("i:" + i);
+	// 			if(i==0){
+	// 				$field.add($(this).prev('li'),document);
+	// 				$field.add($(this),document);
+	// 			} else {
+	// 				$field.add($(this),document);
+	// 			}
+	// 			$fields.add($field);
+	// 			console.log("fieldssize:" + $field.size());
+	// 		});
 	   
-		$fields.each(function(){
-			$(this).find('.ui-widget-content').css({'min-height': '200px'});
-		});
+	// 	$fields.each(function(){
+	// 		$(this).find('.ui-widget-content').css({'min-height': '200px'});
+	// 	});
 		
-	});
+	// });
 		
 	
 }); 
