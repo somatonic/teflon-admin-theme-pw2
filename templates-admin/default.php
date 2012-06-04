@@ -6,13 +6,13 @@
  * Copyright 2010 by Ryan Cramer
  * Teflon Theme 2011 by Soma Philipp Urlich
  *
- * @lastmodified 2012-02-17
+ * @lastmodified 2012-06-04
  *
  */
 
 $searchForm = $user->hasPermission('page-edit') ? $modules->get('ProcessPageSearch')->renderSearchForm() : '';
 $bodyClass = $input->get->modal ? 'modal' : '';
-$bodyClass .= $page->path == $config->urls->admin . "login/" ? ' ProcessLoginForm' : '';
+$bodyClass .= $page->id == 23 ? ' ProcessLoginForm' : '';
 $sitename = $config->siteName ? $config->siteName : $_SERVER['SERVER_NAME'];
 
 if(!isset($content)) $content = '';
