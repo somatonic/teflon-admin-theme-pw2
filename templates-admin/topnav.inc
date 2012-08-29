@@ -61,7 +61,7 @@ foreach($pages->get($wire->config->adminRootPageID)->children("check_access=0") 
 						$info = wire('modules')->getModuleInfo($subchild->process);
 						$subtitle = $info['title'];
 					} else {
-						$subtitle = $p->title;
+						$subtitle = $subchild->title;
 					}
 					echo "\n\t\t\t\t\t\t<li><a href='{$subchild->url}'$class>" . $subtitle . "</a></li>";
 				}
