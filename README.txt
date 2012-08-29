@@ -1,4 +1,4 @@
-Teflon Admin Theme 1.0 by somatonic
+Teflon Admin Theme 1.0.2 by somatonic
 A custom admin theme for ProcessWire2.1.
 
 How to install:

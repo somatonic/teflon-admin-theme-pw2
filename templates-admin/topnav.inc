@@ -6,21 +6,22 @@ function formatVersion($version) {
 
 $section = 'none';
 $modulesArray = array();
-foreach($modules as $module) $modulesArray[$module->className()] = 1; 
+foreach($modules as $module) $modulesArray[$module->className()] = 1;
 
-foreach($modules->getInstallable() as $module) $modulesArray[basename($module, '.module')] = 0; 
+foreach($modules->getInstallable() as $module) $modulesArray[basename($module, '.module')] = 0;
 ksort($modulesArray);
 
 $modulesArraySections = array();
 
 foreach($modulesArray as $name => $installed) {
 	//if(strpos($name, $section) !== 0) {
-		if(!preg_match('/^([A-Za-z][a-z]+)/', $name, $matches)) continue; 
+		if(!preg_match('/^([A-Za-z][a-z]+)/', $name, $matches)) continue;
 		$section = $matches[1];
-		$interfaces = @class_implements($name, false); 
+		$interfaces = @class_implements($name, false);
 		$configurable = (is_array($interfaces) && in_array('ConfigurableModule', $interfaces)) ? 1 : 0;
 		$info = $modules->getModuleInfo($name);
 		$version = formatVersion($info['version']);
+		//$translatedtitle = $info['title'];
 		if($installed) $editurl = $config->urls->admin . "module/edit?name=" . $name;
 			else $editurl = $config->urls->admin . "module/#" . $name;
 		$modulesArraySections[$section][] = array('name'=>$name,'installed' => $installed, 'options' => $configurable, 'url' => $editurl, 'version' => $version);
@@ -31,13 +32,13 @@ foreach($modulesArray as $name => $installed) {
 
 foreach($pages->get($wire->config->adminRootPageID)->children("check_access=0") as $p) {
 
-	if(!$p->viewable()) continue; 
+	if(!$p->viewable()) continue;
 
 	$showItem = $user->isSuperuser() ? true : false;
 	$info = array();
 
-	if(!$showItem) { 
-		$checkPages = $p->numChildren ? $p->children("check_access=0") : array($p); 
+	if(!$showItem) {
+		$checkPages = $p->numChildren ? $p->children("check_access=0") : array($p);
 		foreach($checkPages as $child) {
 			if($child->viewable()) {
 				$showItem = true;
@@ -46,9 +47,9 @@ foreach($pages->get($wire->config->adminRootPageID)->children("check_access=0") 
 		}
 	}
 
-	if($showItem) { 
+	if($showItem) {
 		$class = strpos($page->path, $p->path) === 0 ? " class='on'" : '';
-		$title = strip_tags((string)$p->get('title|name')); 
+		$title = strip_tags((string)$p->get('title|name'));
 		$title = __($title, dirname(__FILE__) . '/default.php'); // translate from context of default.php
 		echo "\n\t\t\t\t<li><a href='{$p->url}'$class>$title</a>";
 		if(count($p->children("check_access=0")) > 0 && $p->id != 3){
@@ -56,9 +57,13 @@ foreach($pages->get($wire->config->adminRootPageID)->children("check_access=0") 
 			foreach($p->children("check_access=0") as $subchild){
 				if($subchild->viewable()) {
 					$class = strpos($page->path, $subchild->path) === 0 ? " class='on'" : '';
-					$title2 = strip_tags($subchild->get('title|name'));
-					$title2 = __($title2, dirname(__FILE__) . '/default.php'); // translate from context of default.php
-					echo "\n\t\t\t\t\t\t<li><a href='{$subchild->url}'$class>" . $title2 . "</a></li>";
+					 if($subchild->process) {
+						$info = wire('modules')->getModuleInfo($subchild->process);
+						$subtitle = $info['title'];
+					} else {
+						$subtitle = $p->title;
+					}
+					echo "\n\t\t\t\t\t\t<li><a href='{$subchild->url}'$class>" . $subtitle . "</a></li>";
 				}
 			}
 			echo "\n\t\t\t\t\t</ul>";

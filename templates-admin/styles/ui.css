@@ -442,3 +442,7 @@
 }
 
 .InputfieldPageListSelectMultiple ol li{ width:auto;}
+
+
+p.PageListSelectName {background-color:#4F87B6; color:white; margin:0 10px 0 0; padding:5px 10px 5px 5px!important; border-radius:5px;}
+p.PageListSelectName .detail{ background-color:#a6b6c9; margin: 0 5px 0 0;padding:5px 10px;}
