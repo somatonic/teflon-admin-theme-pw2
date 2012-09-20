@@ -7,7 +7,7 @@
  * Teflon Theme 2011 by Soma Philipp Urlich
  *
  * @modified 2012-08-29
- * @version  1.0.2
+ * @version  1.0.3
  */
 
 $searchForm = $user->hasPermission('page-edit') ? $modules->get('ProcessPageSearch')->renderSearchForm() : '';
@@ -17,10 +17,13 @@ $sitename = $config->siteName ? $config->siteName : $_SERVER['SERVER_NAME'];
 
 if(!isset($content)) $content = '';
 
-$config->styles->prepend($config->urls->adminTemplates . "styles/main.css");
-$config->styles->append($config->urls->adminTemplates . "styles/ui.css");
+$config->styles->prepend($config->urls->adminTemplates . "styles/main.css?v=2");
+$config->styles->append($config->urls->adminTemplates . "styles/inputfields.css");
+$config->styles->append($config->urls->adminTemplates . "styles/ui.css?v=2");
+$config->scripts->append($config->urls->adminTemplates . "scripts/inputfields.js");
+$config->scripts->append($config->urls->adminTemplates . "scripts/main.js?v=2");
+
 $config->styles->append($config->urls->adminTemplates . "styles/droppy.css");
-$config->scripts->append($config->urls->adminTemplates . "scripts/main.js");
 $config->scripts->append($config->urls->adminTemplates . "scripts/jquery.droppy.js");
 $config->scripts->append($config->urls->adminTemplates . "scripts/jquery.hoverintent.js");
 $config->scripts->append($config->urls->adminTemplates . "scripts/jquery.scrollto.min.js");
@@ -70,7 +73,6 @@ $config->scripts->append($config->urls->adminTemplates . "scripts/jquery.scrollt
 
 	<?php foreach($config->styles->unique() as $file) echo "\n\t<link type='text/css' href='$file' rel='stylesheet' />"; ?>
 
-
 	<!--[if IE]>
 	<link rel="stylesheet" type="text/css" href="<?php echo $config->urls->adminTemplates; ?>styles/ie.css" />
 	<![endif]-->
@@ -80,6 +82,13 @@ $config->scripts->append($config->urls->adminTemplates . "scripts/jquery.scrollt
 	<![endif]-->
 
 	<?php foreach($config->scripts->unique() as $file) echo "\n\t<script type='text/javascript' src='$file'></script>"; ?>
+
+	<script>
+		// overwrite TinyMCE skin setting globally
+		// as defined in /wire/modules/Inputfields/InputfieldTinyMCE/InputfieldTinyMCE.js
+		// and loaded before
+		if('undefined' != typeof InputfieldTinyMCEConfigDefaults) InputfieldTinyMCEConfigDefaults.skin = "default";
+	</script>
 
 </head>
 <body<?php if($bodyClass) echo " class='$bodyClass'"; ?>>

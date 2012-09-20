@@ -1,11 +1,11 @@
-@import url(reset.css); 
+@import url(reset.css);
 @import url(JqueryUI/JqueryUI.css);
 
 /**********************************************************************************************
  * ProcessWire Admin Control Panel - Skyscraper Theme - main.css
  *
- * This file provides the initial layout and styling for most admin control panel elements. 
- * See also ui.css, which provides the final styling and overrides. 
+ * This file provides the initial layout and styling for most admin control panel elements.
+ * See also ui.css, which provides the final styling and overrides.
  *
  * Copyright 2010 by Ryan Cramer
  *
@@ -26,9 +26,6 @@
 	height: 0;
 }
 
-.clearfix {
-
-}
 
 html[xmlns] .clearfix {
 	display: block;
@@ -39,10 +36,10 @@ html[xmlns] .clearfix {
 }
 
 body {
-	background-color: #f4f4f5; 
-	font: 10px/20px "Helvetica Neue", Arial, sans-serif; 
-	color: #747b7f; 
-	
+	background-color: #f4f4f5;
+	font: 10px/20px "Helvetica Neue", Arial, sans-serif;
+	color: #747b7f;
+
 }
 	body.modal {
 		background-color: #fff;
@@ -55,15 +52,15 @@ body {
 }
 
 .container {
-	position: relative; 
-	min-width: 950px; 
-	max-width: 1140px; 
-	margin: 0 auto; 
+	position: relative;
+	min-width: 950px;
+	max-width: 1140px;
+	margin: 0 auto;
 }
 
 
 	body.modal .container {
-		margin: 0 auto; 
+		margin: 0 auto;
 		width:96%;
 		min-width: 300px;
 	}
@@ -71,10 +68,10 @@ body {
 
 a {
 	color: #356f9e;
-		
+
 }
 	a:hover {
-		color: #4287c0; 
+		color: #4287c0;
 		/*background: #f10055;*/
 	}
 
@@ -83,16 +80,12 @@ a {
 	}
 
 .WireFatalError {
-	background: #a30000; 
-	color: #fff; 
-	padding: 1em; 
+	background: #a30000;
+	color: #fff;
+	padding: 1em;
 	position: relative;
 	z-index: 9999;
 }
-
-
-li.ui-state-highlight,li.iui-state-error{ margin:0 0 0 0;}
-a.PageListSelectActionToggle { color:#35709f!important; }
 
 /***********************************************************************************************
  * MASTHEAD
@@ -101,8 +94,7 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 
 #masthead {
  	background:#000 url(images/bg.jpg) top center repeat-x;
-	
-	height: 80px; 
+	height: 80px;
 	font-size: 1.1em;
 	position:fixed;
 	top:0;
@@ -114,27 +106,27 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 	-ms-box-shadow: 0 4px 6px rgba(0,0,0,0.4);
 	-o-box-shadow: 0 4px 6px rgba(0,0,0,0.4);
 	box-shadow: 0 4px 6px rgba(0,0,0,0.4) , inset 0 30px 32px -30px rgba(0,0,0,0.6);
-	
+
 }
 
 	body.modal #masthead {
-		display: none; 
+		display: none;
 	}
 
 	#logo {
-		position: absolute; 
+		position: absolute;
 		right: 5px;
-		top: 1px; 
+		top: 1px;
 		width: 135px;
 		height:31px;
 		text-indent: -9999px;
-		background: url(images/logo2.png) top left no-repeat; 
+		background: url(images/logo2.png) top left no-repeat;
 		z-index:10;
 	}
 
 	#topnav {
 		position: absolute;
-		left: 0; 
+		left: 0;
 		top: 0px;
 		height:31px;
 	}
@@ -150,15 +142,15 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 
 			a.nav,
 			.nav a {
-				font-family:  sans-serif; 
+				font-family:  sans-serif;
 			}
 				a.nav:hover,
 				.nav a:hover {
-					color: #448cc7; 
+					color: #448cc7;
 				}
 
 			#topnav a, #topnav a:visited {
-				color: #4b87b8; 
+				color: #4b87b8;
 				position:relative;
 				margin: 0 1px 0 0;
 				font-size:14px;
@@ -168,20 +160,20 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 				text-shadow: 0px 0px 3px #000;
 				text-transform:uppercase;
 			}
-			
+
 			#topnav a:hover,
 			#topnav a.hover{
-				color: #fff; 
+				color: #fff;
 				/*background: #0f1920; url(images/topnav_a_bg.gif) top left repeat-x; */
 				box-shadow: inset 0 0 9px rgba(0,10,20,0.4);
 
 			}
 			#topnav a.on {
-				color: #fff; 
+				color: #fff;
 				position:relative;
 				box-shadow: inset 0px 0px 9px rgba(0,0,50,0.4);
 				text-shadow: 0px 0px 3px #508dc0;
-			 	border:none; 
+			 	border:none;
 				background-color: #508dc0; /*url(images/topnav_a_bg.gif) top left repeat-x; */
 			}
 			/* sublevel */
@@ -198,7 +190,7 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 				text-transform:none;
 				padding:7px 15px;
 			}
-			
+
 			#topnav ul li a:hover,
 			#topnav ul li a.hover{
 				color:#356f9f!important;
@@ -213,18 +205,18 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 			#topnav ul li a.on:hover{
 				box-shadow: inset 0px 0px 9px rgba(0,0,50,0.4);
 				text-shadow: none;
-			 	border:none; 
+			 	border:none;
 				background-color: #508dc0; /*url(images/topnav_a_bg.gif) top left repeat-x; */
 			}
-			
+
 			#topnav a span.ui-icon { z-index:1; display:block; position:absolute; top:4px; right:30px;}
 			#topnav a.notinstalled { color:#b4c3d7!important;}
 
-			
+
 	#breadcrumb {
-		position: absolute; 
-		left: 15px; 
-		top: 51px; 
+		position: absolute;
+		left: 15px;
+		top: 51px;
 	}
 		#breadcrumb li {
 			font-size: 12px;
@@ -245,25 +237,25 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 				background: transparent url(images/breadcrumb.gif) 0 0 no-repeat;
 			}
 			#breadcrumb a:hover {
-				color: #eee; 
+				color: #eee;
 			}
 
 	#title {
 		font-size: 26px;
 		line-height: 1.3em;
-		font-family: sans-serif; 
-		color: #333; 
-		margin: 0 0 0.6em 0; 
+		font-family: sans-serif;
+		color: #333;
+		margin: 0 0 0.6em 0;
 		/*white-space: nowrap; */
 	}
 
 	#ProcessPageSearchQuery {
-		position: absolute; 
+		position: absolute;
 		top:49px;
-		right: 15px; 
-		width: 112px; 
+		right: 15px;
+		width: 112px;
 		padding: 2px 7px;
-		height: 17px; 
+		height: 17px;
 		border: none;
 		background-color:#444!important;
 		color:#777;
@@ -275,15 +267,15 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 		background-color:#fff!important;
 		color:#333;
 	}
-	
-	
+
+
 	#userinfo_top{
 		position:absolute;
 		top:50px;
 		right: 155px;
 		color:#ddd;
 		letter-spacing:0.09em;
-	
+
 	}
 	#userinfo_top a,#userinfo_top a:visited{
 		color:#5a90bc;
@@ -291,7 +283,7 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 	#userinfo_top a:hover {
 		color: #eee;
 	}
-	
+
 
 
 	/**
@@ -299,26 +291,26 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 		 *
 		 */
 	#head_button {
-		position: absolute; 
+		position: absolute;
 		top: 163px;
-		right: 0; 
-		display: none; 
+		right: 0;
+		display: none;
 	}
 		#head_button button {
-			margin-right: 0; 
-			margin-left: 10px; 
-			font-size: 1.1em; 
+			margin-right: 0;
+			margin-left: 10px;
+			font-size: 1.1em;
 		}
 
 
 	#head_button{ position:fixed; top:120px; right:5%;}
-	
+
 	/* for backward compatibility */
 	button#submit_save_top{ position:fixed; top:120px; right:5%;}
 
 
 #notices {
-	font-size: 1.3em; 
+	font-size: 1.3em;
 }
 
 /***********************************************************************************************
@@ -329,24 +321,22 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 
 #wrapper-content{ margin:100px 0 0 0;}
 #content {
-	position: relative; 
-	background-color: #f4f4f5; 
-	padding-top: 1em; 
-	padding-bottom: 2em; 
-	font-family: sans-serif; 
-	font-size: 1.3em; 
+	position: relative;
+	background-color: #f4f4f5;
+	padding-top: 1em;
+	padding-bottom: 2em;
+	font-family: sans-serif;
+	font-size: 1.3em;
 	box-shadow: 0 4px 5px 0px #ddd;
 	border-bottom:1px solid #ddd;
 
 }
 	#content .container {
-		min-height: 50px; 
-
-
+		min-height: 50px;
 	}
 	.modal #wrapper-content{
 		margin-top:0;
-		background-color: #f5f5f7; 
+		background-color: #f5f5f7;
 	}
 
 		.content img {
@@ -357,7 +347,7 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 			font-size: 1em;
 		}
 		.content .nav a.label {
-			font-size: 1em; 
+			font-size: 1em;
 		}
 
 	.content p,
@@ -370,7 +360,7 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 	#content table th.header,
 	.content h4 {
 		font-family: "Helvetica Neue", Arial, sans-serif;
-		color: #b0ced8; 
+		color: #b0ced8;
 	}
 		#content table th.headerSortUp,
 		#content table th.headerSortDown,
@@ -379,10 +369,10 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 		}
 
 	.content table.AdminDataList {
-		margin-top: 0; 
+		margin-top: 0;
 		border-collapse:separate;
 	}
-	
+
 	.content table.AdminDataList th{
 		color:#5f7683!important;
 		border-bottom:2px solid #ddd;
@@ -390,7 +380,7 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 	}
 	.content table.AdminDataList th.headerSortDown{
 		color:#90aebe!important;
-		
+
 	}
 	.content table.AdminDataList td{
 		border:0;
@@ -400,7 +390,7 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 	}
 
 	.content table.AdminDataList tr:hover td{ background-color:#eaeaea;}
-	
+
 	.content input, .content textarea { border-radius:5px; background-color: #fff!important; border:1px solid #aaa; padding:5px!important; font-size:13px!important;
 		box-sizing: border-box;
 		-webkit-box-sizing: border-box;
@@ -409,14 +399,14 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 	div.uploader span.action{
 		background-color:#f2f2f3;
 	}
-	
+
 	.content h2 {
-		font-family: sans-serif; 
+		font-family: sans-serif;
 		margin: 1em 0;
 		padding: 0 0 4px 0;
-		font-size: 18px; 
-		line-height: 1.2em; 
-		color: #b3311b; 
+		font-size: 18px;
+		line-height: 1.2em;
+		color: #b3311b;
 		font-weight:normal!important;
 		border-bottom:1px solid #e9c9c4;
 	}
@@ -427,7 +417,7 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 
 	.content h3 {
 		margin: 1em 0;
-		font-size: 1.5em; 
+		font-size: 1.5em;
 	}
 
 	.content h4 {
@@ -436,20 +426,20 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 		font-weight: bold;
 		font-size: 0.916666666666667em;
 	}
-	.content ul, 
+	.content ul,
 	.content ol {
 	}
 
 		.content li {
-			margin: 1em 0; 
+			margin: 1em 0;
 			display: block;
-			list-style: disc; 
+			list-style: disc;
 		}
 
 		.content ol li {
-			display: list-item; 
+			display: list-item;
 			list-style-type: decimal;
-			margin-left: 1em; 
+			margin-left: 1em;
 		}
 
 		/**
@@ -457,23 +447,23 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 		 *
 		 */
 		.content ul.actions {
-			
+
 		}
 			.content ul.actions li,
 			li.action {
-				display: inline; 
+				display: inline;
 				border:none;
-				margin: 0; 
+				margin: 0;
 				line-height:1em;
-			
-				text-transform: lowercase; 
+
+				text-transform: lowercase;
 			}
 
 			.content ul.actions li a,
 			li.action a {
-				padding: 2px 6px 2px 6px; 
+				padding: 2px 6px 2px 6px;
 				background-color:#eee;
-				border-bottom: none; 
+				border-bottom: none;
 				color:#5f7c9a;
 				border-radius:4px;
 			}
@@ -483,7 +473,7 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 				background-color:#fff;
 				box-shadow: 0 0 4px #555;
 			}
-		
+
 			.PageListActionMore a{margin-top:15px!important;}
 
 		/**
@@ -492,21 +482,21 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 		 */
 		.content dl {
 			margin: 1em 0;
-			border-bottom: 1px dotted #eee; 
+			border-bottom: 1px dotted #eee;
 		}
 			.content dt,
 			.content dt {
 				display: block;
-				font-weight: bold; 
-				border-top: 1px dotted #eee; 
-				padding-top: 1em; 
+				font-weight: bold;
+				border-top: 1px dotted #eee;
+				padding-top: 1em;
 			}
 			.content dt a {
 				font-size: 1em;
-				text-transform: none; 
+				text-transform: none;
 			}
 			.content dl dd {
-				padding-bottom: 1em; 
+				padding-bottom: 1em;
 			}
 
 			.content dl,.content dl dt{
@@ -520,7 +510,7 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 
 
 	.content .description {
-		font-family: sans-serif; 
+		font-family: sans-serif;
 		font-style: italic;
 		color: #8d9eaa;
 		line-height:17px;
@@ -528,7 +518,7 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 
 	.content p.notes {
 		font-size: 1em;
-		color: #5d572c; 
+		color: #5d572c;
 		background: #e3e0cb;
 		padding:5px 10px;
 		font-style: italic;
@@ -539,7 +529,7 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 	.content span.notes {
 		display:block;
 		font-size: 1em;
-		color: #5d572c; 
+		color: #5d572c;
 		background: #e3e0cb;
 		padding:5px 10px;
 		font-style: italic;
@@ -550,8 +540,8 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 	.content .error {
 		color: red;
 		text-transform: uppercase;
-		font-weight: bold; 
-		font-size: 0.9166666em;	
+		font-weight: bold;
+		font-size: 0.9166666em;
 	}
 
 
@@ -562,40 +552,40 @@ a.PageListSelectActionToggle { color:#35709f!important; }
  */
 
 #footer {
-	margin: 2em 0 2em 0; 
-	font-size: 1.1em; 
+	margin: 2em 0 2em 0;
+	font-size: 1.1em;
 	color: #546873;
-	font-family: sans-serif; 
+	font-family: sans-serif;
 }
 	body.modal #footer {
-		display: none; 
+		display: none;
 	}
 	#footer p {
 		margin-top: 0;
 	}
 	#footer #userinfo {
-		display: block; 
-		float: right; 
+		display: block;
+		float: right;
 	}
 	#footer #userinfo a {
-		font-weight: bold; 
-		text-transform: uppercase; 
+		font-weight: bold;
+		text-transform: uppercase;
 	}
 
 	#debug {
-		margin-top: 2em; 
+		margin-top: 2em;
 	}
 		#debug .container {
-			width: 100%; 
+			width: 100%;
 		}
 		#debug p {
-			margin: 1em 0; 
+			margin: 1em 0;
 		}
 		#debug ol {
-			margin: 1em 0; 
+			margin: 1em 0;
 		}
 		#debug h4 {
-			font-weight: bold; 
+			font-weight: bold;
 		}
 
 
@@ -612,16 +602,28 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 
 .align_right {
 	float: right;
-	margin: 0 0 0.5em 1em; 
+	margin: 0 0 0.5em 1em;
 }
 
 .align_center {
 	display: block;
 	margin-left: auto;
-	margin-right: auto; 
-}	
+	margin-right: auto;
+}
+
+.detail {
+	font-size: 0.9166em;
+	color: #999;
+}
 
 
+
+
+/**
+ *
+ * Some custom Teflon Theme styles
+ *
+ */
 
 	.ProcessLoginForm #content .container,
 	#content .container {
@@ -694,7 +696,7 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 	#content #fieldgroupContext{ top:1em; right:8em;}
 		body.modal #content #fieldgroupContext{ position:absolute; top:-9999px!important; right: 0; }
 
-	.WireTabs{ 
+	.WireTabs{
 		padding: 5px 0;
 		margin: 0 0 0 2px!important;
 		border-bottom:1px solid #ccd3d9;
@@ -730,11 +732,19 @@ a.PageListSelectActionToggle { color:#35709f!important; }
 			z-index:1;
 			background-color:#f8f8f9;
 			padding:8px 15px 8px 15px;
-			
+
 		}
-		
+
 	.WireTabs li a#_ProcessPageEditView{
 		padding:4px 12px;
 		border-radius:5px;
 		margin:0 0 0 1em;
 	}
+
+
+
+
+.ui-state-highlight,
+.iui-state-error{ margin:0 0 0 0;}
+.PageListSelectActionToggle { color: #35709f!important; }
+

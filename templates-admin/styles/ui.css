@@ -1,205 +1,122 @@
-
 /**********************************************************************************************
  * ProcessWire Admin Control Panel - Skyscraper Theme - ui.css
  *
- * This file provides the final layout styling and overdies for the admin control panel. 
- * This is typically the last CSS file loaded, so it is used for overriding any default
- * styles provided by ProcessWire modules. 
+ * 1. jQuery UI overrides.
+ * 2. Theming of specific user interface elements (MarkupPagerNav and PageList)
  *
- * Copyright 2010 by Ryan Cramer
+ * Copyright 2012 by Ryan Cramer
  *
  */
 
 
 /****************************************************************************************
- * Theme specific jQuery UI overrides and additions
+ * 1. Theme specific jQuery UI overrides and additions
  *
  */
 
 .ui-icon {
-	float: left; 
-	margin-right: 2px; 
+	float: left;
+	margin-right: 2px;
 }
-#notices { position:relative;margin:10px 0 0 0;}
+
+label.ui-widget-header + div.ui-widget-content {
+	/* remove doubled border between header/content on ui-widgets */
+	border-top: none;
+}
+
+#notices { position:relative; margin:10px 0 0 0;}
 #notices .ui-state-highlight,
 #notices .ui-state-error {
-	padding: 0.5em; 
+	padding: 0.5em;
 	margin-top:1px;
 }
 
 	#notices .ui-state-error pre {
-		font-size: 11px; 
+		font-size: 11px;
 		margin: 1em 0;
 	}
 
 	#notices .ui-icon {
 		position: relative;
-		top: 2px; 
+		top: 2px;
 	}
 
-.ui-dialog .ui-dialog-content {
-	padding: 0; 
+p span.ui-state-error {
+        padding: 0.25em 0.5em;
 }
 
-.ui-slider { height:0.9em!important; padding:0!important;}
-.ui-slider-range{ height:100%!important; padding:0!important;}
+.ui-dialog .ui-dialog-content {
+	padding: 0;
+}
+
+
+.ui-widget-overlay {
+	background: #000;
+}
+
+.ui-button {
+	font-size: 1em;
+	margin: 1em 1em 0 0;
+	padding: 6px 11px;
+	cursor: pointer;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+	-moz-border-radius: 5px; -webkit-border-radius: 5px; -khtml-border-radius: 5px; border-radius: 5px;
+}
+
+	p > a > .ui-button {
+		font-size: 0.923076923076923em;
+	}
+
+	a .ui-button {
+		display: block;
+	}
+
+
+.ui-slider { height: 0.9em!important; padding: 0!important;}
+.ui-slider-range{ height: 100%!important; padding: 0!important;}
+
+
 
 /****************************************************************************************
- * Theme specific Inputfield module overrides
+ * Teflon Theme specific Inputfields overrides
  *
  */
 
-.Inputfields {
 
-}
-
-	.Inputfields,
-	.Inputfields li,
-	.Inputfields input,
-	.Inputfields select,
-	.Inputfields textarea {
-		font-size: 12px; 
+ 	.Inputfields .InputfieldHidden {
+		display: none!important;
 	}
 
-	.Inputfields .ui-widget-content {
-		padding: 0.8em; 
+
+	.Inputfields > .Inputfield > .ui-widget-content {
+		padding: 0.8em;
 		background-color:#f2f2f3;
 	}
 
-	.Inputfields .ui-widget-header {
-			padding: 0.25em 0 0.25em 0.8em; 
-			-webkit-user-select: none;
-			-khtml-user-select: none;
-			-moz-user-select: none;
-			-o-user-select: none;
-			user-select: none;
-		}
-	
-			.Inputfields .InputfieldStateToggle span.ui-icon {
-				float: right; 
-				padding-right: 0.25em; 
-			}
 
-	.Inputfields > li > .ui-widget-content > p {
-		margin-top: 0; 
-	}
-	.Inputfields > li > .ui-widget-content > .Inputfields > li {
-		margin-top: 0em; 
+
+	.Inputfields > .Inputfield {
+		/*display: block;
+		clear: both;*/
+
 	}
 
-	.Inputfields li > .ui-widget-content .Inputfields > li:last-child {
-		margin-bottom: 0;
+	.Inputfields > .InputfieldStateCollapsed .ui-widget-header {
+		opacity: 0.4;
 	}
 
-	.Inputfields > li {
-		display: block;
-		margin: 0.75em 0;
-		clear: both; 
-	}
-	.Inputfields > li.InputfieldColumnWidth {
-		float: left; 
-		clear:none;
-		margin-top: 0; 
-		margin-left: 1%; 
-	}
-		.Inputfields li.InputfieldColumnWidthFirst {
-			clear: both; 
-			margin-left: 0; 
-		}
-	
-	
-	
-	.Inputfields > li .notes {
-		margin-bottom: 0; 
+	.Inputfields > .InputfieldStateCollapsed .ui-widget-header:hover {
+		opacity: 0.6;
 	}
 
-	.Inputfields .InputfieldHidden {
-		display: none; 
-	}
 
-	.Inputfields .InputfieldSubmit,
-	.Inputfields .InputfieldButton {
-		clear: none; 
-	
-	}
-		.Inputfields .InputfieldSubmit .ui-widget-content,
-		.Inputfields .InputfieldButton .ui-widget-content {
-			padding: 0; 
-			background: none; 
-			border: none; 
-		}
-
-		.Inputfields .InputfieldSubmit .ui-widget-header,
-		.Inputfields .InputfieldButton .ui-widget-header {
-			display: none; 
-		}
-
-		.ui-button {
-			font-size: 1em; 
-			margin: 1em 1em 0 0; 
-			padding: 6px 11px; 
-			cursor: pointer; 
-			box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); 
-		}
-		p > a > .ui-button {
-			font-size: 0.923076923076923em;
-		}
-		a .ui-button {
-			display: block;
-		}
-
-
-	.Inputfields .InputfieldCheckboxes input,
-	.Inputfields .InputfieldRadios input {
-		margin-right: 0.25em; 
-	}
-		.Inputfields .InputfieldCheckboxes li,
-		.Inputfields .InputfieldRadios li {
-			margin: 0; 
-		}
-
-	.Inputfields .InputfieldCheckbox {
-	}
-		.Inputfields .InputfieldCheckbox .notes,
-		.Inputfields .InputfieldCheckboxes .notes,
-		.Inputfields .InputfieldRadios .notes {
-			margin-top: 1em; 
-		}
-
-
-	.Inputfields label {
-		display: block;
-	}
-
-	.Inputfields textarea, 
-	.InputfieldMaxWidth {
-		width: 99%; 
-	}
-
-	.Inputfields .InputfieldStateToggle {
-		cursor: pointer;
-	}
-
-		.Inputfields > .InputfieldStateCollapsed {
-		}
-
-			.Inputfields > .InputfieldStateCollapsed .ui-widget-header {
-				opacity: 0.5; 
-			}
-			.Inputfields > .InputfieldStateCollapsed .ui-widget-header:hover {
-				opacity: 1.0; 
-			}
-
-			.Inputfields > .InputfieldStateCollapsed .ui-widget-content {
-				display: none;
-			}
-
-			.Inputfields > .InputfieldStateCollapsed .InputfieldStateToggle {
-			}
 
 	.InputfieldPageNameURL {
-		font-family: Monaco, Courier, Monaco, monospace; 
+		font-family: Monaco, Courier, Monaco, monospace;
 	}
+
+
+	.InputfieldSubmit .ui-widget-content{ background: none!important; padding: 0!important;}
 
 
 /***********************************************************************************************
@@ -213,41 +130,43 @@
         padding: 0;
         margin: 1em 0;
 }
-        .MarkupPagerNav li {
-                padding: 0;
-                margin: 0;
-                list-style: none;
-                display: inline;
-                padding: 6px 0;
-                background: none;
+    .MarkupPagerNav li {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: inline;
+        padding: 6px 0;
+        background: none;
+    }
+
+        .MarkupPagerNav li a {
+            padding: 4px 9px;
+            margin: 0;
+            text-decoration: none;
+            border: none;
+            background: #2f4248;
+            color: #fff;
+            font-weight: bold;
+            font-size: 11px;
+            text-transform: uppercase;
+			opacity: 0.8;
         }
 
-                .MarkupPagerNav li a {
-                        padding: 4px 9px;
-                        margin: 0;
-                        text-decoration: none;
-                        border: none;
-                        background: #2f4248;
-                        color: #fff;
-                        font-weight: bold;
-                        font-size: 11px;
-                        text-transform: uppercase;
-			opacity: 0.8; 
-                }
-
-                .MarkupPagerNav li a:hover {
-			opacity: 1.0; 
+        .MarkupPagerNav li a:hover {
+			opacity: 1.0;
 		}
 
-                .MarkupPagerNav li.MarkupPagerNavOn a {
+        .MarkupPagerNav li.MarkupPagerNavOn a {
 			opacity: 1.0;
-                        color: #fff;
-                        background: #db1174;
-                }
+            color: #fff;
+            background: #db1174;
+        }
 
-                .MarkupPagerNav li.MarkupPagerNavSeparator {
-                        border: none;
-                }
+        .MarkupPagerNav li.MarkupPagerNavSeparator {
+            border: none;
+        }
+
+
 
 
 /****************************************************************************************
@@ -263,13 +182,13 @@
 	 	background:transparent url(images/icon-doc-hidden.png) 3px 4px no-repeat;
 	 }
 	.PageList .PageListStatusHidden a.PageListPage {
-		color: #a2b4c3; 
+		color: #a2b4c3;
 
 	}
 	.PageList .PageListStatusHidden a.PageListPage:hover {
-		color: #428ac4; 
+		color: #428ac4;
 	}
-	
+
 	.PageListID7{
 		background:transparent url(images/icon-trash.png) 3px 4px no-repeat!important;
 	}
@@ -283,19 +202,18 @@
 	.PageListStatusUnpublished {
 		background:transparent url(images/icon-unpublished.png) 0px 4px no-repeat!important;
 	}
-	
-	
-	
 
-.PageList {
-}
+
+
+
+.PageList {}
 	/**
 	 * Default color for page list items
 	 *
 	 */
 	.PageListItem {padding:6px 6px 6px 20px;border-bottom:1px solid #ddd; background:transparent url(images/icon-doc2.png) 3px 4px no-repeat;}
 	.PageListItem:hover{background-color:#eee;}
-	
+
 	.PageList a.PageListPage{
 		color: #34526b;
 		padding:3px 6px;
@@ -305,11 +223,11 @@
 		 *
 		 */
 		.PageList a.PageListPage:hover {
-			background: none; 
+			background: none;
 			color: #428ac4;
 			padding:3px 6px!important;
 		}
-		
+
 
 	/**
 	 * Color of page when opened
@@ -322,7 +240,7 @@
 		padding-right:6px;
 		padding-left:6px;
 	}
-	
+
 
 	.PageList .PageListAccessOff a.PageListPage,
 	.PageList .PageListAccessOff a.PageListPage:hover {
@@ -333,7 +251,7 @@
 		padding-right:18px!important;
 	}
 
-/* ------- added by teflon admin theme -------- */	
+/* ------- added by teflon admin theme -------- */
 
 
 .PageList .detail{ color: #999; margin: 0 1em 0 0 ; }
@@ -364,10 +282,10 @@
  *
  */
 .PageListSortItem > a.PageListPage {
-	background-color: #29353b!important; 
+	background-color: #29353b!important;
 	color:#fff!important;
 	padding:5px 5px;
-	cursor: move; 
+	cursor: move;
 }
 
 /**
@@ -376,7 +294,7 @@
  */
 .PageListSorting .PageList .PageListItem ul.actions,
 .PageList .PageListSortItem span.PageListNumChildren {
-	display: none !important; 
+	display: none !important;
 }
 
 /**
@@ -389,20 +307,20 @@
 
 /**
  * An invisible placeholder that is automatically inserted above and below open items
- * 
- * This allows for child items where children don't already exist 
+ *
+ * This allows for child items where children don't already exist
  *
  */
 .PageListPlaceholder .PageListPlaceholderItem {
 	/*background: #eee; */
-	height: 16px; /* see .PageListItem */ 
+	height: 16px; /* see .PageListItem */
 	margin: 0;
 	border: 0;
 	background:none;
 }
 
-/** 
- * Prevents a 6px gap from appearing below a open item 
+/**
+ * Prevents a 6px gap from appearing below a open item
  *
  */
 .PageListPlaceholder + .PageListItem,
@@ -411,25 +329,25 @@
 }
 
 /**
- * Last item in a list before it retreats to the parent list, prevents a visual margin below it. 
+ * Last item in a list before it retreats to the parent list, prevents a visual margin below it.
  *
  */
 .PageListPlaceholder:last-child {
-	margin-bottom: -16px; 
+	margin-bottom: -16px;
 }
 
 
-/** 
+/**
  * The hover placeholder that appears in potential targets as you are sorting/moving a PageListItem
  *
  */
 .PageListSortPlaceholder {
-	background-color: #a6b6c9; 
+	background-color: #a6b6c9;
 	padding: 6px 0;
 	margin:0 0;
-	width: auto; 
-	border-left: 2px solid #222; 
-	
+	width: auto;
+	border-left: 2px solid #222;
+
 }
 
 .PageListPagination a{
