@@ -58,11 +58,13 @@
     -moz-user-select: none;
     -o-user-select: none;
     user-select: none; /* prevent selection of this element */
+    border: none!important;
 }
 
 .Inputfields label {
     /* label usually the same as the .ui-widget-header, but this applies to other labels too */
     display: block;
+    border: none!important;
 }
 
 
@@ -127,7 +129,7 @@
 
     .Inputfields > .InputfieldStateCollapsed .ui-widget-header {
         /* collapsed Inputfields appear sightly faded */
-        opacity: 0.6;
+        opacity: 0.8;
     }
     .Inputfields > .InputfieldStateCollapsed .ui-widget-header:hover {
         /* when hovering, they are no longer faded */
@@ -216,4 +218,78 @@
 .InputfieldRenderValueMode .InputfieldSubmit,
 .InputfieldRenderValueMode .InputfieldButton {
     display: none;
+}
+
+
+
+/**
+ * custom fieldset to hide the Fieldset Label to save space and make it cleaner
+ * add your own
+ */
+
+.Inputfield_column1 > label,
+.Inputfield_column2 > label,
+.Inputfield_column3 > label,
+.Inputfield_column4 > label,
+.Inputfield_column5 > label,
+.Inputfield_column6 > label,
+.Inputfield_fieldset_content > label,
+.Inputfield_fieldset_sidebar > label{ display: none!important; }
+.Inputfield_column1 > .ui-widget-content,
+.Inputfield_column2 > .ui-widget-content,
+.Inputfield_column3 > .ui-widget-content,
+.Inputfield_column4 > .ui-widget-content,
+.Inputfield_column5 > .ui-widget-content,
+.Inputfield_column6 > .ui-widget-content,
+.Inputfield_fieldset_content > .ui-widget-content,
+.Inputfield_fieldset_sidebar > .ui-widget-content{
+    padding: 9px!important;
+    background: #f4f4f4!important;
+    border: none!important;
+    /*box-shadow: 0 0 3px 1px #eee;*/
+}
+
+
+.Inputfields > .Inputfield > .ui-widget-header{
+   background: #fff;
+   border: 1px solid #c5c5c7!important;
+   /*border-bottom: 1px dotted #eee!important;*/
+   border-bottom: none!important;
+   color: #333;
+   font-weight: 700;
+   font-size: 1.1em;
+   border-bottom: 1px solid white;
+   letter-spacing: 0.025em;
+   padding: 0.6em 0.8em 0.6em 0.8em;
+   box-shadow: 0px -1px 3px #d5d5d7!important; /* 0 0 55px #e3e4e5 inset!important;*/
+}
+
+.Inputfields > .InputfieldStateCollapsed .ui-widget-header {
+    border: 1px solid #bbb!important;
+    background: #fff;
+}
+
+.Inputfields .InputfieldRepeater .InputfieldFieldset > .ui-widget-header{
+    /*border: 1px solid #000000;*/
+    /*background: #1f2428 url(JqueryUI/images/ui-bg_highlight-soft_50_1f2428_1x100.png) 50% 50% repeat-x;*/
+    /*color: #ffffff; font-weight: 700;*/
+    /*padding-top: 4px;
+    padding-bottom: 4px;*/
+}
+
+.ui-sortable .ui-state-default{
+
+}
+
+.Inputfields > .Inputfield > .ui-widget-header .ui-icon {
+    background-image: url(JqueryUI/images/ui-icons_333333_256x240.png);
+    z-index: 1;
+}
+/*.Inputfields .InputfieldRepeater .InputfieldFieldset > .ui-widget-header .ui-icon { background-image: url(JqueryUI/images/ui-icons_ffffff_256x240.png); }*/
+.Inputfields .InputfieldRepeater .InputfieldFieldset > .ui-widget-header.ui-state-error .ui-icon {
+    background-image: url(JqueryUI/images/ui-icons_cd0a0a_256x240.png);
+}
+
+.InputfieldFile .InputfieldFileLanguageInfo .actions {
+    top: 0.5em;
 }

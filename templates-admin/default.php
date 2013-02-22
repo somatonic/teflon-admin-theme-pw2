@@ -1,13 +1,13 @@
 <?php
 
 /**
- * ProcessWire 2.x Admin Markup Template
+ * ProcessWire 2.3+ Admin Markup Template
  *
  * Copyright 2010 by Ryan Cramer
- * Teflon Theme 2011 by Soma Philipp Urlich
+ * Teflon Theme 2013 by Soma Philipp Urlich
  *
- * @modified 2012-08-29
- * @version  1.0.3
+ * @modified 2013-02-22
+ * @version  2.0.0
  */
 
 $searchForm = $user->hasPermission('page-edit') ? $modules->get('ProcessPageSearch')->renderSearchForm() : '';
@@ -16,6 +16,7 @@ $bodyClass .= $page->id == 23 ? ' ProcessLoginForm' : '';
 $sitename = $config->siteName ? $config->siteName : $_SERVER['SERVER_NAME'];
 
 if(!isset($content)) $content = '';
+
 
 $config->styles->prepend($config->urls->adminTemplates . "styles/main.css?v=2");
 $config->styles->append($config->urls->adminTemplates . "styles/inputfields.css");
@@ -65,12 +66,17 @@ $config->scripts->append($config->urls->adminTemplates . "scripts/jquery.scrollt
 			'files' => $config->urls->files,
 			'templates' => $config->urls->templates,
 			'adminTemplates' => $config->urls->adminTemplates,
+			'adminTemplates' => $config->urls->adminTemplates,
 			);
+		$upload_label = __('file upload', __FILE__);
+		$jsConfig['translations'] = array(
+		        'teflon_upload_text' => $upload_label // file upload button label text
+		    );
 		?>
 
 		var config = <?php echo json_encode($jsConfig); ?>;
 	</script>
-
+	<link href='http://fonts.googleapis.com/css?family=Oxygen:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	<?php foreach($config->styles->unique() as $file) echo "\n\t<link type='text/css' href='$file' rel='stylesheet' />"; ?>
 
 	<!--[if IE]>
