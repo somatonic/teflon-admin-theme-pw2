@@ -109,7 +109,7 @@ body .ui-button, .content .ui-button,.ui-dialog .ui-button {
 
 
 	.Inputfields > .Inputfield > .ui-widget-content {
-		padding: 0.8em;
+		padding: 1em 1em 2em 1em;
 		/*background-color:#f2f2f3;*/
 	}
 
