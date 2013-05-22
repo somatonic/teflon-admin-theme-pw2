@@ -109,7 +109,7 @@ $config->scripts->append($config->urls->adminTemplates . "scripts/jquery.scrollt
 			<ul id='breadcrumb' class='nav'><?php
 				foreach($this->fuel('breadcrumbs') as $breadcrumb) {
 					$title = __($breadcrumb->title, __FILE__);
-					echo "\n\t\t\t\t<li><a href='{$breadcrumb->url}'>{$title}</a><span>&nbsp;</span></li>";
+					echo "<li><a href='{$breadcrumb->url}'>{$title}</a><span>&nbsp;</span></li>";
 				}
 				?>
 
