@@ -315,7 +315,7 @@ body .ui-button, .content .ui-button,.ui-dialog .ui-button {
  * When sorting/moving, highlight the page name in yellow
  *
  */
-.PageListSortItem > a.PageListPage {
+.PageList .PageListSortItem > a.PageListPage {
 	background-color: #3b7940!important;
 	color: #fff!important;
 	padding:5px 5px;

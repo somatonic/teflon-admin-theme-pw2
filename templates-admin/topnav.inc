@@ -78,7 +78,7 @@ foreach($pages->get($wire->config->adminRootPageID)->children("check_access=0") 
 				foreach($m as $module){
 					$options = '';
 					$class = '';
-					if($module['options'] == 1) $options = '<span class="ui-icon ui-icon-gear"><span>';
+					if($module['options'] == 1) $options = '<span class="ui-icon ui-icon-gear"></span>';
 					if($module['installed'] == 0) $class .= 'notinstalled';
 					$version = $module['version'];
 					echo "\n\t\t\t\t\t\t\t<li><a rel='".$module['name']."' class='$class' href='".$module['url']."'>".$module['name']." ($version) $options</a></li>";
