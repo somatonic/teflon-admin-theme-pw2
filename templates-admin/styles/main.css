@@ -38,7 +38,7 @@ body {
 
 .container {
 	position: relative;
-	min-width: 950px;
+	min-width: 320px;
 	max-width: 1140px;
 	margin: 0 auto;
 }
