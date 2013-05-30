@@ -100,7 +100,7 @@ $config->scripts->append($config->urls->adminTemplates . "scripts/jquery.scrollt
 
 			<ul id='topnav' class='nav droppy'>
 				<li><a id='sitelink' href='<?php echo $config->urls->root; ?>'><?php echo __('Site', __FILE__); ?></a></li>
-				<?php include($config->paths->templatesAdmin . "topnav.inc"); ?>
+				<?php include($config->paths->adminTemplates . "topnav.inc"); ?>
 
 			</ul>
 
