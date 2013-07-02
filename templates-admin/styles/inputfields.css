@@ -172,13 +172,25 @@
 .Inputfields .InputfieldButton {
     /* enable horizontal stack of buttons */
     clear: none;
+    float: left;
+    overflow: hidden;
+    margin: 0 0.4em!important;
 }
     .Inputfields .InputfieldSubmit .ui-widget-content,
     .Inputfields .InputfieldButton .ui-widget-content {
         /* we don't need our visual furniture for buttons */
-        padding: 0;
+        padding: 0!important;
+        margin: 0!important;
         background: none;
         border: none;
+        overflow: hidden;
+    }
+
+    .Inputfields .InputfieldButton .ui-widget-content a,
+    .Inputfields .InputfieldButton .ui-widget-content a .ui-button{
+        padding: 0!important;
+        margin: 0!important;
+        overflow: hidden;
     }
 
     .Inputfields .InputfieldSubmit .ui-widget-header,
