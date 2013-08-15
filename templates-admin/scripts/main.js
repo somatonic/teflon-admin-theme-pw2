@@ -18,7 +18,7 @@ $(document).ready(function() {
 				$button.attr('data-from_id', $t.attr('id')).attr('id', $t.attr('id') + '_copy');
 				$a = $("<a></a>").attr('href', '#');
 				$button.click(function() {
-					$("#" + $(this).attr('data-from_id')).click().parents('form').submit();
+					$("#" + $(this).attr('data-from_id')).click(); // .parents('form').submit();
 					return false;
 				});
 				$head.append($a.append($button));
