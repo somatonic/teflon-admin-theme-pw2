@@ -48,7 +48,11 @@
 .Inputfields > .Inputfield > .ui-widget-content {
     /* the Inputfield's content, padded from the borders */
     padding: 1em;
-    overflow: auto;
+}
+.ui-widget-content:after {
+      content: "";
+      display: table;
+      clear: both;
 }
 
 .Inputfields .ui-widget-header {
