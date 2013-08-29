@@ -49,6 +49,11 @@
     /* the Inputfield's content, padded from the borders */
     padding: 1em;
 }
+.ui-widget-content:after {
+      content: "";
+      display: table;
+      clear: both;
+}
 
 .Inputfields .ui-widget-header {
     /* typically the Inputfield's <label> */
